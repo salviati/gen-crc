@@ -1,0 +1,69 @@
+.TH GEN-CRC 1 " 3 July 2005" "GNU" "Sega Genesis Utilities"
+.SH NAME
+gen-crc \- a utility for manipulating checksum in binary Sega Genesis / Mega Drive ROMs
+.SH SYNOPSIS
+.B "gen-crc "
+[OPTIONS] [romlist]
+
+.SH DESCRIPTION
+.LP
+.I gen-crc
+is a tool than can calculate and modify the checksum of a Sega Genesis / Mega Drive ROMs which is in raw binary format (
+.I deinterlave
+can be used to convert SMD files to raw binary files).
+.I gen-crc
+expects a list of ROM files, if none given it'll try to read from stdin.
+
+.SH OPTIONS
+.sp 1
+
+.TP 0.5i
+.B "\-c \--stdout"
+Set output to stdout.
+
+.TP 0.5i
+.B "\-f \--fragile"
+Stop processing input files in the first failed file.
+
+.TP 0.5i
+.B "\-h \--help"
+Show a brief synopsis of all options.
+
+.TP 0.5i
+.B "\-i \--in-place"
+Write modifications to the files. This's the default behavior. To prevent this, -c or -C can be used.
+
+.TP 0.5i
+.B "\-L \--license"
+Display the license of software.
+
+.TP 0.5i
+.B "\-C \--calculate-only"
+Only calculates the checksum of the rom and outputs the checksum (in decimal) to stdout.
+
+.TP 0.5i
+.B "\-s \--silent"
+Suppress all messages except error messages and those that are explicitly requested.
+
+.TP 0.5i
+.BI "\-S \--set-checksum " n
+Set checksum to
+.I n
+instead of calculating it.
+
+.TP 0.5i
+.B "\-V \--version"
+Display software version information.
+
+.SH "SEE ALSO"
+.BR gen-info (1),
+.BR deinterleave (1)
+
+.SH "BUGS"
+None known.
+.LP
+Report bugs to <bug@freeconsole.org>
+
+.SH "COPYING"
+You may redistribute copies of this document under the terms of the GNU Free Documentation License.
+
